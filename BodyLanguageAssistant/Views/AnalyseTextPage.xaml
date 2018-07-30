@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BodyLanguageAssistant.AnalyseTextPage">
+  <StackLayout Padding="25">
+    <Label Text="Enter some text:"/>
+    <Editor AutoSize="TextChanges" BackgroundColor="Cornsilk" x:Name="TextForAnalysisEntry"/>
+    <Label x:Name="SentimentAnalysisResultLabel" VerticalOptions="CenterAndExpand" FontSize="36"/>
+    <Button Clicked="AnalyseTextButtonClicked" Text="Analyse Sentiment" VerticalOptions="EndAndExpand"/>
+  </StackLayout>
+</ContentPage>

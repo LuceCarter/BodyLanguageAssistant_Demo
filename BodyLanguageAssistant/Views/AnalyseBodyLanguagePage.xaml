@@ -3,5 +3,7 @@
 	<StackLayout>
 	<!--Photo Section-->
 		<Button Text="Pick/Take Photo for Analysis" Clicked="TakeOrPhotoButtonClicked"/>
+		<Image x:Name="PhotoForAnalysis"/>
+		<Label x:Name="EmotionAnalysisResult" />
 	</StackLayout>
 </ContentPage>

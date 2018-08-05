@@ -19,7 +19,7 @@ namespace BodyLanguageAssistant.ViewModels
 			{
 				return new Command(() =>
 				{
-					navigation.PushModalAsync(new AnalyseTextPage());
+					navigation.PushModalAsync(new NavigationPage(new AnalyseTextPage()));
 				});
 
 			}

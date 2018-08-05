@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using BodyLanguageAssistant.ViewModels;
 
 namespace BodyLanguageAssistant
 {
@@ -12,16 +13,8 @@ namespace BodyLanguageAssistant
 		public MainPage()
 		{
 			InitializeComponent();
+			BindingContext = new MainViewModel(Navigation);
 		}
 
-		public void AnalyseTextButtonClicked(object sender, EventArgs e)
-		{
-			Navigation.PushModalAsync(new AnalyseTextPage());
-		}
-
-		public void AnalyseBodyLanguageButtonClicked(object sender, EventArgs e)
-		{
-			Navigation.PushModalAsync(new NavigationPage(new AnalyseBodyLanguagePage()));
-		}
 	}
 }

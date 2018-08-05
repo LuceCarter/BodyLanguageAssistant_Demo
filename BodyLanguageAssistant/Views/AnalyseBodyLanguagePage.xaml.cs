@@ -4,8 +4,8 @@ using System.Text;
 using Microsoft.Azure.CognitiveServices.Vision.Face.Models;
 using Plugin.Media.Abstractions;
 using Xamarin.Forms;
-using Plugin.Media.Abstractions;
 using Plugin.Media;
+using System;
 
 namespace BodyLanguageAssistant
 {
@@ -27,7 +27,7 @@ namespace BodyLanguageAssistant
 
 			var photoSource = (StreamImageSource)ImageSource.FromStream(() => photo.GetStreamWithImageRotatedForExternalStorage());
 			DetectedFace detectedFace = new DetectedFace();
-			EmotionAnalysisResult.Text = "Emotion: " + GetEmotion(face.)
+			//EmotionAnalysisResult.Text = "Emotion: " + GetEmotion(face.)
 
 		}
 

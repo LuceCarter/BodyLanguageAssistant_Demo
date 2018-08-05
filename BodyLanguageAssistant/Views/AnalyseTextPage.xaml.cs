@@ -10,6 +10,7 @@ namespace BodyLanguageAssistant
 		public AnalyseTextPage()
 		{
 			InitializeComponent();
+			BindingContext = new AnalyseTextViewModel();
 		}
 
 		public async void AnalyseTextButtonClicked(object sender, EventArgs e)

@@ -13,6 +13,7 @@ namespace BodyLanguageAssistant
 		public AnalyseTextViewModel()
 		{
 			AnalyseTextCommand = new Command(async () => await AnalyseText(_textForAnalysis));
+			_sentimentResultColour = Color.Black;
 		}
 
 		public ICommand AnalyseTextCommand { get; }
@@ -31,9 +32,10 @@ namespace BodyLanguageAssistant
 
 		public Color SentimentResultColour
 		{
-			get => SentimentResultColour;
+			get => _sentimentResultColour;
 			set => SetProperty(ref _sentimentResultColour, value);
 		}
+
 
 		private async Task AnalyseText(string textForAnalysis)
 		{

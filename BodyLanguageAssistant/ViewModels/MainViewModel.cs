@@ -19,7 +19,7 @@ namespace BodyLanguageAssistant.ViewModels
 			{
 				return new Command(() =>
 				{
-					navigation.PushModalAsync(new NavigationPage(new AnalyseTextPage()));
+					navigation.PushModalAsync(new AnalyseTextPage());
 				});
 
 			}
@@ -32,7 +32,7 @@ namespace BodyLanguageAssistant.ViewModels
 			{
 				return new Command(() =>
 				{
-					navigation.PushModalAsync(new NavigationPage(new AnalyseBodyLanguagePage()));
+					navigation.PushModalAsync(new AnalyseBodyLanguagePage());
 				});
 			}
 		}

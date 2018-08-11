@@ -6,7 +6,7 @@
   <StackLayout Padding="25">
     <Label Text="Enter some text:"/>
     <Editor AutoSize="TextChanges" BackgroundColor="Cornsilk" Text="{Binding TextForAnalysis}"/>
+	<Button Command="{Binding AnalyseTextCommand}" Text="Analyse Sentiment" />
     <Label VerticalOptions="CenterAndExpand" FontSize="36" Text="{Binding SentimentAnalysisResult}" TextColor="{Binding SentimentResultColour}"/>
-    <Button Command="{Binding AnalyseTextCommand}" Text="Analyse Sentiment" VerticalOptions="EndAndExpand"/>
   </StackLayout>
 </ContentPage>

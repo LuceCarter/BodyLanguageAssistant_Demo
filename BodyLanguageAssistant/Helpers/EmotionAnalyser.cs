@@ -11,7 +11,7 @@ namespace BodyLanguageAssistant
 		const string emotionAPIKey = "b43fb634e01946c5947ee5ab1d876d24";
 		FaceClient faceClient = new FaceClient(credentials: new ApiKeyServiceClientCredentials(emotionAPIKey))
 		{
-			BaseUri = new Uri(emotionAPIKey)
+			//BaseUri = new Uri(emotionAPIKey)
 		};
 
 		//public async Task<Emotions> AnalyseEmotionAsync(MediaFile photo)

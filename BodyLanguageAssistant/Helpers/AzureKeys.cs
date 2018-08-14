@@ -5,8 +5,8 @@ namespace BodyLanguageAssistant.Helpers
 {
 	public static class AzureKeys
 	{
-		public const string FaceApiKey = "d651a71cef594ffcaef6f521ee97e173";
-		//public const AzureRegions FaceApiRegion = AzureRegions.Westeurope;
-		public const string FaceApiEndpoint = "https://westeurope.api.cognitive.microsoft.com";
+		public const string FaceApiKey = "YOUR_API_KEY";
+		public const string BaseUrl = "YOUR COGNITIVE SERVICES ENDPOINT";
+		public const string SentimentAPIKey = "YOUR_API_KEY";
 	}
 }

@@ -14,15 +14,6 @@ namespace BodyLanguageAssistant.ViewModels
 		StreamImageSource ImageToAnalyse { get; }
 		DetectedFace Face { get; }
 
-		ImageSource imageSource;
-		public ImageSource AnalysedPhoto
-		{
-			get => imageSource;
-			set => SetProperty(ref imageSource, value);
-		}
-
-		public string Description { get; }
-
 		public ImageResultViewModel(MediaFile photo, IEnumerable<DetectedFace> faces)
 		{
 			ImageToAnalyse = (StreamImageSource)ImageSource.FromStream(() => photo.GetStreamWithImageRotatedForExternalStorage());
@@ -32,6 +23,15 @@ namespace BodyLanguageAssistant.ViewModels
 			Description = "Most likely emotion: " + emotions.FirstOrDefault().Key + " with a score of " + emotions.FirstOrDefault().Value.ToString();
 
 		}
+
+		ImageSource imageSource;
+		public ImageSource AnalysedPhoto
+		{
+			get => imageSource;
+			set => SetProperty(ref imageSource, value);
+		}
+
+		public string Description { get; }
 
 
 		private KeyValuePair<string, double> GetEmotion(DetectedFace face)

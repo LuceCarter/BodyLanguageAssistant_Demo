@@ -9,17 +9,15 @@ using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.Linq;
+using BodyLanguageAssistant.Helpers;
 
 namespace BodyLanguageAssistant
 {
 	public class TextAnalyser
 	{
-		const string sentimentBaseURL = " https://westeurope.api.cognitive.microsoft.com";
-		const string sentimentAPIKey = "b8222a8fcc96454ba813aaeae9d32c13";
-
 		readonly HttpClient httpClient = new HttpClient
 		{
-			BaseAddress = new Uri(sentimentBaseURL),
+			BaseAddress = new Uri(AzureKeys.BaseUrl),
 			Timeout = TimeSpan.FromSeconds(60),
 		};
 
@@ -30,7 +28,7 @@ namespace BodyLanguageAssistant
 			using (var requestContent = new StringContent(requestJson))
 			{
 				requestContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-				requestContent.Headers.Add("Ocp-Apim-Subscription-Key", sentimentAPIKey);
+				requestContent.Headers.Add("Ocp-Apim-Subscription-Key", AzureKeys.SentimentAPIKey);
 
 				responseMessage = await httpClient.PostAsync("text/analytics/v2.0/sentiment", requestContent).ConfigureAwait(false);
 			}

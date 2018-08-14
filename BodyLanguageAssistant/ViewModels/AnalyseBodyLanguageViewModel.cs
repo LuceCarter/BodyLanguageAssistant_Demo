@@ -18,17 +18,11 @@ namespace BodyLanguageAssistant.ViewModels
 	{
 		FaceClient faceFinder;
 
-		public string Description
-		{
-			get;
-			set;
-		}
-
 		public AnalyseBodyLanguageViewModel()
 		{
 			TakePhotoCommand = new Command(async () => await TakePhotoAsync());
 			faceFinder = new FaceClient(new ApiKeyServiceClientCredentials(AzureKeys.FaceApiKey));
-			faceFinder.Endpoint = AzureKeys.FaceApiEndpoint;
+			faceFinder.Endpoint = AzureKeys.BaseUrl;
 
 		}
 		MediaFile photo;
@@ -45,6 +39,7 @@ namespace BodyLanguageAssistant.ViewModels
 			get => isBusy;
 			set => SetProperty(ref isBusy, value);
 		}
+
 
 		public ICommand TakePhotoCommand { get; }
 		private async Task TakePhotoAsync()

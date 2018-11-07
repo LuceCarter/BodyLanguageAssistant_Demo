@@ -47,7 +47,10 @@ namespace BodyLanguageAssistant.ViewModels
 			try
 			{
 				IsBusy = true;
-				photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions { });
+				photo = await Plugin.Media.CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+				{
+					PhotoSize = PhotoSize.Small
+				});
 				ImageForAnalysis = (StreamImageSource)ImageSource.FromStream(() => photo.GetStream());
 
 				using (var stream = photo.GetStreamWithImageRotatedForExternalStorage())

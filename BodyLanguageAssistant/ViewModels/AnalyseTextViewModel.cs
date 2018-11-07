@@ -50,7 +50,7 @@ namespace BodyLanguageAssistant
 					SentimentAnalysisResult = "You seem normal to me!";
 					break;
 				case Sentiment.Positive:
-					SentimentResultColour = Color.Gold;
+					SentimentResultColour = Color.Green;
 					SentimentAnalysisResult = "Zip-a-dee-doo-dah, zip-a-dee-ay My, oh, my, what a wonderful day ";
 					break;
 				case Sentiment.Negative:

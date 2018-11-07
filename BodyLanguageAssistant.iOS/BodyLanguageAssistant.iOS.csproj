@@ -171,4 +171,15 @@
       <Name>BodyLanguageAssistant</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fantasylandscape%403x.jpg" />
+    <BundleResource Include="Resources\fantasylandscape%402x.jpg" />
+    <BundleResource Include="Resources\fantasylandscape.jpg" />
+    <BundleResource Include="Resources\kitten%403x.png" />
+    <BundleResource Include="Resources\kitten%402x.png" />
+    <BundleResource Include="Resources\kitten.png" />
+  </ItemGroup>
 </Project>

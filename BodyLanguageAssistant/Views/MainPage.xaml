@@ -3,10 +3,17 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 xmlns:local="clr-namespace:BodyLanguageAssistant" 
 			 x:Class="BodyLanguageAssistant.MainPage">
-	<StackLayout VerticalOptions="CenterAndExpand">
-		<Button Text="Analyse Text" 
-				Command="{Binding AnalyseTextButtonClicked}"/>
-		<Button Text="Analyse Body Language" 
-				Command="{Binding AnalyseBodyLanguageButtonClicked}" />
-	</StackLayout>
+	
+	
+	<Grid>
+		<StackLayout VerticalOptions="CenterAndExpand">
+			<Button Text="Analyse Text" 
+					Command="{Binding AnalyseTextButtonClicked}"
+					FontSize="26"/>
+			<Button Text="Analyse Body Language" 
+					Command="{Binding AnalyseBodyLanguageButtonClicked}"
+					FontSize="26"/>
+		</StackLayout>	
+	</Grid>
+	
 </ContentPage>
